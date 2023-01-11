@@ -1,0 +1,6 @@
+export {default as HeaderInner } from "./HeaderInner"
+export {default as HeroSection } from "./HeroSection"
+export {default as Questions } from "./Questions"
+export {default as Stacks } from "./Stacks"
+export {default as Projects } from "./Projects"
+export { default as  Footer } from "./Footer"

@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  transition: all 600ms;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #04bafe;
+  color:white ;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #04bafe;
+  transition: all 500ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transform: scaleX(1.5);
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body,
+html {
+  font-family: "Gilroy-Medium";
+  font-size: 18px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("./assets/fonts/gilroy-black.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("./assets/fonts/gilroy-medium.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-UltraLight";
+  src: url("./assets//fonts/gilroy-ultralight.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./assets//fonts/gilroy-bold.ttf");
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("./assets//fonts/gilroy-semibold.ttf");
+}
+
+.bold-font {
+  font-family: "Gilroy-Black";
+}
+
+.bold-bold {
+  font-family: "Gilroy-Bold";
+}
+
+.bold-semi {
+  font-family: "Gilroy-SemiBold";
+}
+
+.bold-medium {
+  font-family: "Gilroy-Medium";
+}
+
+.bold-light {
+  font-family: "Gilroy-UltraLight";
+}
+
+.animate-stick {
+  position: relative;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animate-stick::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: black;
+  transition: 500ms;
+}
+
+.animate-stick:hover::before {
+  transform: scaleX(0);
+}
+
+.img-hover {
+  transition: all 600ms;
+  filter: grayscale(1);
+}
+
+.img-hover:hover {
+  filter: grayscale(0);
+}
+
+.burger-form:hover .burger-span {
+  transform: rotate(0) translateY(0);
+}
+
+.second_title {
+  color: #04bafe;
+}
+
+.animatek {
+  position: relative;
+}
+
+.animatek::before {
+  content: "";
+  position: absolute;
+  width: 4ch;
+  height: 10px;
+  background-color: black;
+  bottom: 0;
+}
+
+.sec {
+  position: relative;
+}
+
+.sec::before {
+  content: "";
+  position: absolute;
+  width: 10ch;
+  height: 10px;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+}
+
+.animate-circle {
+  filter: drop-shadow(0 0 30px lightgray);
+}
+
+.animate-circle::before {
+  content: "";
+  position: absolute;
+  inset: -20px 40px;
+  background: linear-gradient(315deg, #04bafe, #d400da);
+  animation: rotate 4s linear infinite;
+}
+
+.animate-circle-sec::before {
+  content: "";
+  position: absolute;
+  inset: -20px 40px;
+  background: linear-gradient(315deg, #04bafe, #d400da);
+  animation: rotate 4s linear infinite;
+}
+
+.animate-circle::after {
+  content: "Оставить заявку";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  inset: 10px;
+}
+
+.animate-circle:hover::before {
+  inset: -20px 0px;
+}
+
+.animate-circle-sec::after {
+  content: "SOFT FACTORY";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  inset: 15px;
+}
+
+.animate-circle-sec:hover::before {
+  inset: -20px 0px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-1turn);
+  }
+}
+
+.text-animate {
+  width: 5ch;
+  color: black;
+  position: relative;
+}
+
+.text-animate::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  animation: left-scale 1s 0s ease-in-out;
+}
+
+.last-animate-text {
+  width: 10ch;
+  color: #04bafe;
+  position: relative;
+}
+
+.last-animate-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #04bafe;
+}
+
+.b-shadow {
+  box-shadow: 0 0 30px lightblue;
+}
+
+.border-white-bott {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.animate-hover-QA::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: scaleX(1.5);
+  background-color: transparent;
+}
+
+.animate-hover-QA:hover::before {
+  background-color: rgba(255, 255, 255, 0.407);
+}
+
+.fil-shadow {
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.fil-shadow:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px lightgray;
+}
+
+.srool::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.srool::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.srool::-webkit-scrollbar-thumb {
+  background-color: #00000000;
+}
+
+@media screen and (max-width: 400px) {
+  .mil {
+    font-size: 20px;
+  }
+
+  .bigmil {
+    font-size: 10px;
+  }
+
+  .button {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .adaptive-form {
+    padding-top: 150px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .adaptive-cross {
+    right: 10px;
+  }
+
+  .adaptive-title-qa {
+    text-align: center;
+  }
+
+  .adaptive-p-qa {
+    text-align: center;
+  }
+
+  .adaptive-qa {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-height: 950px) {
+  .adaptive-hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text-animate::before {
+    right: 0;
+    height: 4px;
+  }
+
+  .last-animate-text::before {
+    left: 0;
+    height: 4px;
+  }
+}
+
+@media screen and (min-width: 1925px) {
+   body {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;    
+   }
+
+   header {
+    max-width: 1920px;
+   }
+
+   main {
+    max-width: 1920px;
+   }
+
+   footer {
+    max-width: 1920px;
+   }
+
+   .bd-open {
+    opacity: 1;
+    transform: translateX(-18%);
+   }
+   
+   .bg-close {
+    opacity: 0;
+    transform: translateX(-50%);
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   .adaptive-stack {
+    margin-top: 250px;
+   }
+}
+
+@media screen and (max-height: 600px) {
+  .adaptive-stack {
+    margin-top: 500px;
+  }
+}
